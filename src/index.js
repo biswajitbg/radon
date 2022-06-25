@@ -14,15 +14,15 @@ mongoose.connect("mongodb+srv://biswajit10:RqGx288M-J3sVWE@cluster0.vqgtj.mongod
 .then( () => console.log("MongoDb is connected"))
 .catch ( err => console.log(err) )
 
-app.use (
-    function (req, res, next) {
-        const today = new Date();
-        const myIp = req.ip;
-        const myPath = req.path;
-        console.log (today,",", myIp,",", myPath);
-        next();
-  }
-  );
+// app.use (
+//     function (req, res, next) {
+//         const today = new Date();
+//         const myIp = req.ip;
+//         const myPath = req.path;
+//         console.log (today,",", myIp,",", myPath);
+//         next();
+//   }
+//   );
 
 app.use('/', route);
 
